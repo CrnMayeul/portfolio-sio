@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Portfolio de Mayeul Carcany - Étudiant en BTS SIO SISR" />
+        <meta name="author" content="Mayeul Carcany" />
+        <title>Mayeul Carcany - Portfolio BTS SIO SISR</title>
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+        
+        <style>
+            :root {
+                --bs-primary: #10b981 !important; /* Vert émeraude moderne */
+            }
+            body {
+                background-color: #0f172a !important; /* Bleu nuit très sombre / slate */
+                color: #94a3b8 !important; /* Gris clair élégant pour le texte */
+            }
+            .bg-primary {
+                background-color: #1e293b !important; /* Sidebar bleu nuit profond */
+            }
+            .text-primary {
+                color: #34d399 !important; /* Vert émeraude clair pour les accents */
+            }
+            h1, h2, h3, h4, h5, h6, .subheading {
+                color: #f8fafc !important; /* Blanc cassé très propre pour les titres */
+            }
+            p, ul, li {
+                color: #cbd5e1 !important;
+            }
+            hr.m-0 {
+                border-color: #334155 !important;
+            }
+            .document-box {
+                background-color: #1e293b;
+                border: 1px solid #334155;
+                border-radius: 8px;
+                padding: 30px;
+                margin-bottom: 30px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+            .tech-badge {
+                background-color: #334155;
+                color: #34d399;
+                padding: 5px 12px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                font-weight: 600;
+                display: inline-block;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+            .cv-section-title {
+                border-bottom: 2px solid #34d399;
+                padding-bottom: 5px;
+                margin-top: 25px;
+                margin-bottom: 15px;
+                color: #34d399 !important;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Mayeul Carcany</span>
+                <span class="d-none d-lg-block">
+                    <div style="width: 10rem; height: 10rem; background-color: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; color: #34d399; font-size: 3rem; border: 3px solid #34d399;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#stage">Rapport de Stage</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Formation</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Projets & Lab</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#cv">Mon CV</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-0">
+            
+            <!-- Section À propos -->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Mayeul
+                        <span class="text-primary">Carcany</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Étudiant en 2e année de BTS SIO option SISR · Lycée Nelson Mandela (Saint-Benoît, La Réunion) ·
+                        <a href="mailto:carcanymayeul@icloud.com" style="color: #34d399;">carcanymayeul@icloud.com</a>
+                    </div>
+                    <p class="lead mb-5">Administrateur Système & Réseau en formation. Passionné par la virtualisation sous Proxmox VE, l'administration de serveurs Linux et le déploiement de services internes.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Section Rapport de Stage -->
+            <section class="resume-section" id="stage">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Rapport de Stage & Infrastructures</h2>
+                    
+                    <div class="document-box">
+                        <h3 class="text-primary mb-3"><i class="fas fa-server me-2"></i> Architecture de Virtualisation & Réseau</h3>
+                        <p>Durant mon stage technique, j'ai configuré et administré une infrastructure virtualisée sous <strong>Proxmox VE</strong>, intégrant des conteneurs LXC et des machines virtuelles :</p>
+                        <ul class="fa-ul mb-4">
+                            <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Hébergement du site web de documentation technique sous Apache et PHP.</li>
+                            <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Configuration rigoureuse des pare-feux et des règles de filtrage réseau.</li>
+                            <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Déploiement et gestion des conteneurs LXC (notamment srv-absence).</li>
+                        </ul>
+
+                        <h3 class="text-primary mb-3 mt-5"><i class="fas fa-laptop-code me-2"></i> Application Web Interne (Suivi des Absences)</h3>
+                        <p>Mise en place d'une interface d'administration interne pour centraliser le registre des absences et proposer des outils interactifs avec export des données.</p>
+                        
+                        <div class="mt-4">
+                            <span class="tech-badge">Proxmox VE</span>
+                            <span class="tech-badge">LXC Containers</span>
+                            <span class="tech-badge">Debian / Linux</span>
+                            <span class="tech-badge">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Section Formation -->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Formation</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Lycée Nelson Mandela (Saint-Benoît)</h3>
+                            <div class="subheading mb-3">BTS Services Informatiques aux Organisations (SIO) - Option SISR</div>
+                            <p>Solutions d'infrastructure, systèmes et réseaux.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2025 - 2027 (2e année)</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Lycée Nelson Mandela (Saint-Benoît)</h3>
+                            <div class="subheading mb-3">Baccalauréat STMG</div>
+                            <p>Spécialité Systèmes d'Information de Gestion (SIG).</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Diplômé</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Section Compétences -->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Compétences Techniques</h2>
+                    <ul class="fa-ul mb-4">
+                        <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span><strong>Systèmes & Virtualisation :</strong> Administration Linux, Proxmox VE, conteneurs LXC, FOG Project.</li>
+                        <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span><strong>Réseaux & Sécurité :</strong> Configuration de pare-feu, câblage réseau, architecture IP et sous-réseaux.</li>
+                        <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span><strong>Développement & Web :</strong> Python, HTML/CSS, VS Code, gestion de versions Git / GitHub.</li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Section Projets & Lab -->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projets & Laboratoire</h2>
+                    <p><strong>Plateforme de Documentation & Projets :</strong> Déploiement d'un site intranet pour documenter l'architecture réseau et les procédures d'administration. Travaux de développement front-end et gestion des dépendances GitHub.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            
+            <!-- Section CV -->
+            <section class="resume-section" id="cv">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Mon CV & Mon Parcours</h2>
+                    <div id="cv-content" class="document-box">
+                        <h3 class="text-primary mb-3"><i class="fas fa-user-tie me-2"></i> Curriculum Vitae - Mayeul Carcany</h3>
+                        
+                        <p class="mb-2"><strong>Coordonnées :</strong> Saint-Benoît, La Réunion | Tél : 0692 86 41 23 | Email : <a href="mailto:carcanymayeul@icloud.com" style="color: #34d399;">carcanymayeul@icloud.com</a></p>
+                        <p class="mb-4"><strong>Profil :</strong> Étudiant en 2e année de BTS SIO option SISR rigoureux et autonome, spécialisé dans l'administration des systèmes Linux, la virtualisation sous Proxmox et le déploiement d'applications web internes.</p>
+                        
+                        <h4 class="cv-section-title">Expérience Professionnelle & Stage</h4>
+                        <p><strong>Stage technique - Lycée Nelson Mandela (Saint-Benoît)</strong><br>
+                        <em>Sous la supervision du technicien informatique</em></p>
+                        <ul>
+                            <li>Interventions sur le parc informatique (salle B112) : installation de postes et mise en conformité du câblage réseau.</li>
+                            <li>Industrialisation du déploiement d'images systèmes à l'échelle du lycée grâce à l'outil <strong>FOG Project</strong>.</li>
+                            <li>Mise en place d'une infrastructure virtualisée avec l'hyperviseur <strong>Proxmox VE</strong>.</li>
+                            <li>Administration d'un serveur web sous Linux (Apache, PHP) hébergeant le CMS Grav.</li>
+                            <li>Développement d'une application web en Python dans un conteneur LXC pour le suivi centralisé des absences avec export CSV/Excel.</li>
+                        </ul>
+
+                        <h4 class="cv-section-title">Formations</h4>
+                        <p>
+                            <strong>BTS SIO (Services Informatiques aux Organisations) - Option SISR</strong><br>
+                            Lycée Nelson Mandela, Saint-Benoît (2025 - 2027) - <em>2e année en cours</em>
+                        </p>
+                        <p>
+                            <strong>Baccalauréat STMG</strong><br>
+                            Lycée Nelson Mandela, Saint-Benoît - <em>Diplômé</em>
+                        </p>
+
+                        <h4 class="cv-section-title">Compétences & Atouts</h4>
+                        <p class="mb-0">Autonomie, esprit d'analyse, résolution de problèmes d'infrastructure réseau, maîtrise de l'environnement Linux et des outils de virtualisation.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
