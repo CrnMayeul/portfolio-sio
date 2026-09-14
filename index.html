@@ -3,216 +3,329 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Portfolio de Mayeul Carcany - Étudiant en BTS SIO SISR" />
+        <meta name="description" content="Portfolio de Mayeul Carcany - Étudiant en BTS SIO SISR 2e année" />
         <meta name="author" content="Mayeul Carcany" />
         <title>Mayeul Carcany - Portfolio BTS SIO SISR</title>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet" />
         
         <style>
             :root {
-                --bs-primary: #10b981 !important; /* Vert émeraude moderne */
+                --bs-primary: #10b981 !important;
             }
             body {
-                background-color: #0f172a !important; /* Bleu nuit très sombre / slate */
-                color: #94a3b8 !important; /* Gris clair élégant pour le texte */
+                background-color: #0b0f19 !important;
+                color: #94a3b8 !important;
+                font-family: 'Inter', sans-serif !important;
             }
+            
+            /* --- MENU LATÉRAL PROFESSIONNEL --- */
+            #sideNav {
+                background-color: #0f172a !important;
+                border-right: 1px solid #1e293b;
+                padding: 1.5rem 1rem !important;
+            }
+            #sideNav .navbar-nav .nav-item {
+                margin-bottom: 0.5rem;
+            }
+            #sideNav .navbar-nav .nav-link {
+                color: #94a3b8 !important;
+                font-weight: 500;
+                font-size: 0.85rem;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                padding: 12px 16px !important;
+                border-radius: 8px;
+                transition: all 0.25s ease-in-out;
+            }
+            #sideNav .navbar-nav .nav-link:hover {
+                color: #34d399 !important;
+                background-color: rgba(16, 185, 129, 0.08);
+                transform: translateX(4px);
+            }
+            #sideNav .navbar-nav .nav-link.active-link {
+                color: #0f172a !important;
+                background-color: #10b981 !important;
+                font-weight: 600;
+                box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            }
+
+            /* --- MISE EN PAGE DU CONTENU --- */
+            .container-fluid {
+                padding-left: calc(17rem + 2rem) !important;
+                padding-right: 3rem !important;
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            @media (max-width: 992px) {
+                .container-fluid {
+                    padding-left: 1.5rem !important;
+                    padding-right: 1.5rem !important;
+                    padding-top: 6rem !important;
+                }
+            }
+
+            .resume-section {
+                display: none;
+                min-height: 80vh;
+                animation: fadeIn 0.3s ease-in-out;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(6px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
             .bg-primary {
-                background-color: #1e293b !important; /* Sidebar bleu nuit profond */
+                background-color: #1e293b !important;
             }
             .text-primary {
-                color: #34d399 !important; /* Vert émeraude clair pour les accents */
+                color: #34d399 !important;
             }
             h1, h2, h3, h4, h5, h6, .subheading {
-                color: #f8fafc !important; /* Blanc cassé très propre pour les titres */
+                color: #f8fafc !important;
+                font-weight: 700;
             }
             p, ul, li {
                 color: #cbd5e1 !important;
+                line-height: 1.6;
             }
-            hr.m-0 {
-                border-color: #334155 !important;
-            }
+            
             .document-box {
                 background-color: #1e293b;
                 border: 1px solid #334155;
-                border-radius: 8px;
-                padding: 30px;
+                border-radius: 12px;
+                padding: 35px;
                 margin-bottom: 30px;
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
             }
             .tech-badge {
-                background-color: #334155;
+                background-color: #0f172a;
                 color: #34d399;
-                padding: 5px 12px;
+                border: 1px solid #334155;
+                padding: 6px 14px;
                 border-radius: 20px;
-                font-size: 0.85rem;
+                font-size: 0.8rem;
                 font-weight: 600;
                 display: inline-block;
-                margin-right: 5px;
-                margin-bottom: 5px;
+                margin-right: 6px;
+                margin-bottom: 8px;
             }
             .cv-section-title {
                 border-bottom: 2px solid #34d399;
-                padding-bottom: 5px;
-                margin-top: 25px;
+                padding-bottom: 8px;
+                margin-top: 30px;
                 margin-bottom: 15px;
                 color: #34d399 !important;
+            }
+
+            /* --- BOUTONS PROFESSIONNELS --- */
+            .btn-action {
+                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                color: #0f172a !important;
+                font-weight: 600;
+                padding: 12px 24px;
+                border-radius: 8px;
+                border: none;
+                transition: all 0.2s ease;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+            }
+            .btn-action:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+                background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+            }
+            .btn-secondary-action {
+                background-color: #1e293b;
+                color: #f8fafc !important;
+                font-weight: 600;
+                padding: 12px 24px;
+                border-radius: 8px;
+                border: 1px solid #475569;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                transition: all 0.2s ease;
+            }
+            .btn-secondary-action:hover {
+                background-color: #334155;
+                border-color: #64748b;
+                color: #ffffff !important;
+                transform: translateY(-2px);
             }
         </style>
     </head>
     <body id="page-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#accueil">
                 <span class="d-block d-lg-none">Mayeul Carcany</span>
                 <span class="d-none d-lg-block">
-                    <div style="width: 10rem; height: 10rem; background-color: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; color: #34d399; font-size: 3rem; border: 3px solid #34d399;">
-                        <i class="fas fa-user"></i>
+                    <div style="width: 8.5rem; height: 8.5rem; background-color: #1e293b; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; color: #34d399; font-size: 2.8rem; border: 2px solid #34d399; box-shadow: 0 0 20px rgba(52, 211, 153, 0.15);">
+                        <i class="fas fa-user-shield"></i>
                     </div>
                 </span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#stage">Rapport de Stage</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Formation</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Compétences</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Projets & Lab</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#cv">Mon CV</a></li>
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profil">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#stages">Stages & Situations Pro</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#documents">CV & Documents</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="container-fluid p-0">
+        
+        <div class="container-fluid">
             
-            <!-- Section À propos -->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Mayeul
-                        <span class="text-primary">Carcany</span>
+            <!-- Section Accueil -->
+            <section class="resume-section" id="accueil">
+                <div class="resume-section-content text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
+                    <h1 style="font-size: 5rem; letter-spacing: 0.08em; font-weight: 800; margin-bottom: 1rem;">
+                        PORT<span class="text-primary">FOLIO</span>
                     </h1>
-                    <div class="subheading mb-5">
-                        Étudiant en 2e année de BTS SIO option SISR · Lycée Nelson Mandela (Saint-Benoît, La Réunion) ·
-                        <a href="mailto:carcanymayeul@icloud.com" style="color: #34d399;">carcanymayeul@icloud.com</a>
+                    <p class="lead mb-4" style="font-size: 1.3rem; color: #94a3b8;">Mayeul Carcany · BTS SIO Option SISR</p>
+                    <div class="mt-3">
+                        <a href="#profil" class="btn-action js-scroll-trigger" style="font-size: 1.1rem; padding: 15px 30px;"><i class="fas fa-arrow-right"></i> Entrer sur le site</a>
                     </div>
-                    <p class="lead mb-5">Administrateur Système & Réseau en formation. Passionné par la virtualisation sous Proxmox VE, l'administration de serveurs Linux et le déploiement de services internes.</p>
                 </div>
             </section>
-            <hr class="m-0" />
 
-            <!-- Section Rapport de Stage -->
-            <section class="resume-section" id="stage">
+            <!-- Section Profil -->
+            <section class="resume-section" id="profil">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Rapport de Stage & Infrastructures</h2>
+                    <h1 class="mb-2" style="font-size: 3rem;">
+                        MAYEUL <span class="text-primary">CARCANY</span>
+                    </h1>
+                    <div class="subheading mb-4" style="font-size: 1.05rem; letter-spacing: 0.02em;">
+                        ÉTUDIANT EN 2E ANNÉE DE BTS SIO OPTION SISR · <a href="https://lycee-mandela.fr/" target="_blank" style="color: #34d399; text-decoration: none;">LYCÉE NELSON MANDELA</a> (SAINT-BENOÎT, LA RÉUNION) · 
+                        <a href="mailto:carcanymayeul@icloud.com" style="color: #34d399; text-decoration: none;">CARCANYMAYEUL@ICLOUD.COM</a>
+                    </div>
+                    <p class="lead mb-5" style="max-width: 800px; font-size: 1.1rem;">Administrateur Système & Réseau en formation (2e année). Passionné par la virtualisation sous Proxmox VE, l'administration de serveurs Linux et le déploiement sécurisé d'infrastructures d'entreprise.</p>
                     
-                    <div class="document-box">
-                        <h3 class="text-primary mb-3"><i class="fas fa-server me-2"></i> Architecture de Virtualisation & Réseau</h3>
-                        <p>Durant mon stage technique, j'ai configuré et administré une infrastructure virtualisée sous <strong>Proxmox VE</strong>, intégrant des conteneurs LXC et des machines virtuelles :</p>
-                        <ul class="fa-ul mb-4">
-                            <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Hébergement du site web de documentation technique sous Apache et PHP.</li>
-                            <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Configuration rigoureuse des pare-feux et des règles de filtrage réseau.</li>
-                            <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Déploiement et gestion des conteneurs LXC (notamment srv-absence).</li>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#documents" class="btn-action js-scroll-trigger"><i class="fas fa-file-pdf"></i> Consulter mon CV & Rapports</a>
+                        <a href="#stages" class="btn-secondary-action js-scroll-trigger"><i class="fas fa-building"></i> Voir mon Stage</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Stages & Situations Professionnelles -->
+            <section class="resume-section" id="stages">
+                <div class="resume-section-content">
+                    <h2 class="mb-3">Stages & Situations Professionnelles</h2>
+                    <p class="mb-4" style="max-width: 800px;">Bilan de mes missions conduites en milieu professionnel (Stage technique au Lycée Nelson Mandela).</p>
+
+                    <div class="document-box" style="max-width: 900px;">
+                        <h3 class="text-primary mb-3"><i class="fas fa-building me-2"></i> Stage Technique - Lycée Nelson Mandela</h3>
+                        <p class="mb-3"><strong>Missions réalisées :</strong></p>
+                        <ul class="fa-ul mb-4" style="margin-left: 1.5rem;">
+                            <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Interventions sur le câblage réseau et l'infrastructure informatique de l'établissement.</li>
+                            <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Industrialisation du déploiement de postes et de systèmes via <strong>FOG Project</strong>.</li>
+                            <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Mise en place de l'hyperviseur <strong>Proxmox VE</strong> et gestion de conteneurs <strong>LXC</strong>.</li>
+                            <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Administration de <strong>Grav CMS</strong> et développement/intégration d'une application web interne en Python.</li>
                         </ul>
-
-                        <h3 class="text-primary mb-3 mt-5"><i class="fas fa-laptop-code me-2"></i> Application Web Interne (Suivi des Absences)</h3>
-                        <p>Mise en place d'une interface d'administration interne pour centraliser le registre des absences et proposer des outils interactifs avec export des données.</p>
                         
-                        <div class="mt-4">
+                        <div class="mt-3 mb-4">
                             <span class="tech-badge">Proxmox VE</span>
+                            <span class="tech-badge">FOG Project</span>
                             <span class="tech-badge">LXC Containers</span>
-                            <span class="tech-badge">Debian / Linux</span>
-                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Grav CMS</span>
+                            <span class="tech-badge">Python / Apache</span>
+                        </div>
+
+                        <!-- Boutons d'actions pour le stage avec la bonne URL -->
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#" class="btn-action" target="_blank"><i class="fas fa-file-pdf"></i> Télécharger mon Rapport de Stage (PDF)</a>
+                            <a href="https://lycee-mandela.fr/" class="btn-secondary-action" target="_blank"><i class="fas fa-external-link-alt"></i> Site du Lycée Nelson Mandela</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <hr class="m-0" />
-
-            <!-- Section Formation -->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Formation</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Lycée Nelson Mandela (Saint-Benoît)</h3>
-                            <div class="subheading mb-3">BTS Services Informatiques aux Organisations (SIO) - Option SISR</div>
-                            <p>Solutions d'infrastructure, systèmes et réseaux.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2025 - 2027 (2e année)</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Lycée Nelson Mandela (Saint-Benoît)</h3>
-                            <div class="subheading mb-3">Baccalauréat STMG</div>
-                            <p>Spécialité Systèmes d'Information de Gestion (SIG).</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Diplômé</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-
-            <!-- Section Compétences -->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Compétences Techniques</h2>
-                    <ul class="fa-ul mb-4">
-                        <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span><strong>Systèmes & Virtualisation :</strong> Administration Linux, Proxmox VE, conteneurs LXC, FOG Project.</li>
-                        <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span><strong>Réseaux & Sécurité :</strong> Configuration de pare-feu, câblage réseau, architecture IP et sous-réseaux.</li>
-                        <li><span class="fa-li"><i class="fas fa-check text-primary"></i></span><strong>Développement & Web :</strong> Python, HTML/CSS, VS Code, gestion de versions Git / GitHub.</li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" />
-
-            <!-- Section Projets & Lab -->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Projets & Laboratoire</h2>
-                    <p><strong>Plateforme de Documentation & Projets :</strong> Déploiement d'un site intranet pour documenter l'architecture réseau et les procédures d'administration. Travaux de développement front-end et gestion des dépendances GitHub.</p>
-                </div>
-            </section>
-            <hr class="m-0" />
             
-            <!-- Section CV -->
-            <section class="resume-section" id="cv">
+            <!-- Section CV & Documents -->
+            <section class="resume-section" id="documents">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Mon CV & Mon Parcours</h2>
-                    <div id="cv-content" class="document-box">
+                    <h2 class="mb-3">CV & Documents Officiels</h2>
+                    <p class="mb-4" style="max-width: 800px;">Téléchargez ou visualisez mes documents professionnels mis à jour.</p>
+                    
+                    <div class="document-box" style="max-width: 900px;">
                         <h3 class="text-primary mb-3"><i class="fas fa-user-tie me-2"></i> Curriculum Vitae - Mayeul Carcany</h3>
                         
-                        <p class="mb-2"><strong>Coordonnées :</strong> Saint-Benoît, La Réunion | Tél : 0692 86 41 23 | Email : <a href="mailto:carcanymayeul@icloud.com" style="color: #34d399;">carcanymayeul@icloud.com</a></p>
+                        <p class="mb-2"><strong>Coordonnées :</strong> Saint-Benoît, La Réunion | Tél : 0692 86 41 23 | Email : <a href="mailto:carcanymayeul@icloud.com" style="color: #34d399; text-decoration: none;">carcanymayeul@icloud.com</a></p>
                         <p class="mb-4"><strong>Profil :</strong> Étudiant en 2e année de BTS SIO option SISR rigoureux et autonome, spécialisé dans l'administration des systèmes Linux, la virtualisation sous Proxmox et le déploiement d'applications web internes.</p>
                         
-                        <h4 class="cv-section-title">Expérience Professionnelle & Stage</h4>
-                        <p><strong>Stage technique - Lycée Nelson Mandela (Saint-Benoît)</strong><br>
-                        <em>Sous la supervision du technicien informatique</em></p>
-                        <ul>
-                            <li>Interventions sur le parc informatique (salle B112) : installation de postes et mise en conformité du câblage réseau.</li>
-                            <li>Industrialisation du déploiement d'images systèmes à l'échelle du lycée grâce à l'outil <strong>FOG Project</strong>.</li>
-                            <li>Mise en place d'une infrastructure virtualisée avec l'hyperviseur <strong>Proxmox VE</strong>.</li>
-                            <li>Administration d'un serveur web sous Linux (Apache, PHP) hébergeant le CMS Grav.</li>
-                            <li>Développement d'une application web en Python dans un conteneur LXC pour le suivi centralisé des absences avec export CSV/Excel.</li>
-                        </ul>
-
                         <h4 class="cv-section-title">Formations</h4>
-                        <p>
+                        <p class="mb-2">
                             <strong>BTS SIO (Services Informatiques aux Organisations) - Option SISR</strong><br>
-                            Lycée Nelson Mandela, Saint-Benoît (2025 - 2027) - <em>2e année en cours</em>
+                            <a href="https://lycee-mandela.fr/" target="_blank" style="color: #34d399; text-decoration: none;">Lycée Nelson Mandela</a>, Saint-Benoît (2025 - 2027) - <em>2e année en cours</em>
                         </p>
-                        <p>
+                        <p class="mb-4">
                             <strong>Baccalauréat STMG</strong><br>
-                            Lycée Nelson Mandela, Saint-Benoît - <em>Diplômé</em>
+                            <a href="https://lycee-mandela.fr/" target="_blank" style="color: #34d399; text-decoration: none;">Lycée Nelson Mandela</a>, Saint-Benoît - <em>Diplômé</em>
                         </p>
 
-                        <h4 class="cv-section-title">Compétences & Atouts</h4>
-                        <p class="mb-0">Autonomie, esprit d'analyse, résolution de problèmes d'infrastructure réseau, maîtrise de l'environnement Linux et des outils de virtualisation.</p>
+                        <div class="mt-4 pt-3 border-top border-secondary d-flex gap-3 flex-wrap">
+                            <a href="#" class="btn-action" target="_blank"><i class="fas fa-download"></i> Télécharger le CV (PDF)</a>
+                            <a href="#" class="btn-secondary-action" target="_blank"><i class="fas fa-file-pdf"></i> Télécharger le Rapport de Stage (PDF)</a>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
+
+        <!-- Scripts Bootstrap et Gestion dynamique de la navigation -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navLinks = document.querySelectorAll('.js-scroll-trigger');
+                const sections = document.querySelectorAll('.resume-section');
+
+                function showSection(targetId) {
+                    sections.forEach(section => {
+                        if ('#' + section.id === targetId) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        if (link.getAttribute('href') === targetId) {
+                            link.classList.add('active-link');
+                        } else {
+                            link.classList.remove('active-link');
+                        }
+                    });
+                }
+
+                // Affiche la page d'accueil par défaut
+                showSection('#accueil');
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        const targetId = this.getAttribute('href');
+                        if (targetId && targetId.startsWith('#')) {
+                            e.preventDefault();
+                            showSection(targetId);
+                            
+                            const navbarResponsive = document.querySelector('#navbarResponsive');
+                            const navbarToggler = document.querySelector('.navbar-toggler');
+                            if (navbarResponsive && navbarResponsive.classList.contains('show')) {
+                                navbarToggler.click();
+                            }
+                            
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
