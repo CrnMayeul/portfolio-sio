@@ -97,7 +97,7 @@
                 border: 1px solid #334155;
                 border-radius: 12px;
                 padding: 35px;
-                margin-bottom: 30px;
+                margin-bottom: 25px;
                 box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
             }
             .tech-badge {
@@ -111,13 +111,6 @@
                 display: inline-block;
                 margin-right: 6px;
                 margin-bottom: 8px;
-            }
-            .cv-section-title {
-                border-bottom: 2px solid #34d399;
-                padding-bottom: 8px;
-                margin-top: 30px;
-                margin-bottom: 15px;
-                color: #34d399 !important;
             }
 
             /* --- BOUTONS PROFESSIONNELS --- */
@@ -176,8 +169,7 @@
                 <ul class="navbar-nav w-100">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#accueil">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profil">Profil</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#stages">Stages & Situations Pro</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#documents">CV & Documents</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#parcours">Parcours & Documents</a></li>
                 </ul>
             </div>
         </nav>
@@ -187,42 +179,60 @@
             <!-- Section Accueil -->
             <section class="resume-section" id="accueil">
                 <div class="resume-section-content text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
-                    <h1 style="font-size: 5rem; letter-spacing: 0.08em; font-weight: 800; margin-bottom: 1rem;">
-                        PORT<span class="text-primary">FOLIO</span>
+                    <h1 style="font-size: 2.8rem; letter-spacing: 0.02em; font-weight: 800; margin-bottom: 1rem; max-width: 900px;">
+                        Mayeul Carcany - <span class="text-primary">Administrateur Systèmes & Réseaux</span> en formation
                     </h1>
-                    <p class="lead mb-4" style="font-size: 1.3rem; color: #94a3b8;">Mayeul Carcany · BTS SIO Option SISR</p>
+                    <p class="lead mb-4" style="font-size: 1.2rem; color: #94a3b8;">Étudiant en 2e année de BTS SIO Option SISR · La Réunion</p>
                     <div class="mt-3">
-                        <a href="#profil" class="btn-action js-scroll-trigger" style="font-size: 1.1rem; padding: 15px 30px;"><i class="fas fa-arrow-right"></i> Entrer sur le site</a>
+                        <a href="#profil" class="btn-action js-scroll-trigger" style="font-size: 1.1rem; padding: 15px 30px;"><i class="fas fa-arrow-right"></i> Découvrir mon parcours</a>
                     </div>
                 </div>
             </section>
 
             <!-- Section Profil -->
             <section class="resume-section" id="profil">
-                <div class="resume-section-content">
+                <div class="resume-section-content" style="max-width: 900px;">
                     <h1 class="mb-2" style="font-size: 3rem;">
                         MAYEUL <span class="text-primary">CARCANY</span>
                     </h1>
                     <div class="subheading mb-4" style="font-size: 1.05rem; letter-spacing: 0.02em;">
-                        ÉTUDIANT EN 2E ANNÉE DE BTS SIO OPTION SISR · <a href="https://lycee-mandela.fr/" target="_blank" style="color: #34d399; text-decoration: none;">LYCÉE NELSON MANDELA</a> (SAINT-BENOÎT, LA RÉUNION) · 
-                        <a href="mailto:carcanymayeul@icloud.com" style="color: #34d399; text-decoration: none;">CARCANYMAYEUL@ICLOUD.COM</a>
+                        ÉTUDIANT EN 2E ANNÉE DE BTS SIO OPTION SISR · LYCÉE NELSON MANDELA (SAINT-BENOÎT, LA RÉUNION)
                     </div>
-                    <p class="lead mb-5" style="max-width: 800px; font-size: 1.1rem;">Administrateur Système & Réseau en formation (2e année). Passionné par la virtualisation sous Proxmox VE, l'administration de serveurs Linux et le déploiement sécurisé d'infrastructures d'entreprise.</p>
                     
+                    <div class="document-box">
+                        <h3 class="text-primary mb-3"><i class="fas fa-id-card me-2"></i> À propos de moi</h3>
+                        <p class="mb-3">Titulaire d'un <strong>Baccalauréat STMG</strong> obtenu au Lycée Nelson Mandela, je poursuis actuellement mes études en deuxième année de BTS SIO (Services Informatiques aux Organisations) option <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux) au sein du même établissement à Saint-Benoît. Je me spécialise dans la gestion, la sécurisation et l'optimisation des architectures réseaux et des environnements serveurs.</p>
+                        <p class="mb-3">Rigoureux, curieux et méthodique, je développe au quotidien des compétences solides en administration système Linux, en virtualisation avancée (Proxmox VE, conteneurs LXC) ainsi qu'en automatisation du déploiement de postes informatiques (FOG Project).</p>
+                        
+                        <div class="mt-3 mb-4">
+                            <span class="tech-badge">Administration Linux</span>
+                            <span class="tech-badge">Proxmox VE / LXC</span>
+                            <span class="tech-badge">Réseaux & Sécurité</span>
+                            <span class="tech-badge">FOG Project</span>
+                            <span class="tech-badge">Python / Git</span>
+                        </div>
+
+                        <!-- Bouton de navigation rapide vers la section unique combinée -->
+                        <div class="d-flex gap-3 flex-wrap pt-2 border-top border-secondary">
+                            <a href="#parcours" class="btn-action js-scroll-trigger" style="font-size: 0.9rem; padding: 10px 18px;"><i class="fas fa-folder-open"></i> Voir mes stages & CV</a>
+                        </div>
+                    </div>
+
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="#documents" class="btn-action js-scroll-trigger"><i class="fas fa-file-pdf"></i> Consulter mon CV & Rapports</a>
-                        <a href="#stages" class="btn-secondary-action js-scroll-trigger"><i class="fas fa-building"></i> Voir mon Stage</a>
+                        <a href="mailto:carcanymayeul@icloud.com" class="btn-secondary-action" style="font-size: 0.9rem; padding: 10px 18px;"><i class="fas fa-envelope"></i> Me contacter (E-mail)</a>
+                        <a href="https://lycee-mandela.fr/" target="_blank" class="btn-secondary-action" style="font-size: 0.9rem; padding: 10px 18px;"><i class="fas fa-school"></i> Site du Lycée Nelson Mandela</a>
                     </div>
                 </div>
             </section>
 
-            <!-- Section Stages & Situations Professionnelles -->
-            <section class="resume-section" id="stages">
-                <div class="resume-section-content">
-                    <h2 class="mb-3">Stages & Situations Professionnelles</h2>
-                    <p class="mb-4" style="max-width: 800px;">Bilan de mes missions conduites en milieu professionnel (Stage technique au Lycée Nelson Mandela).</p>
+            <!-- Section Unique Regroupant Stages et Documents (CV & Rapport) -->
+            <section class="resume-section" id="parcours">
+                <div class="resume-section-content" style="max-width: 900px;">
+                    <h2 class="mb-3">Parcours Professionnel & Documents</h2>
+                    <p class="mb-4">Retrouvez ci-dessous le bilan de mes missions en milieu professionnel ainsi que les documents officiels à télécharger.</p>
 
-                    <div class="document-box" style="max-width: 900px;">
+                    <!-- Bloc Stage -->
+                    <div class="document-box">
                         <h3 class="text-primary mb-3"><i class="fas fa-building me-2"></i> Stage Technique - Lycée Nelson Mandela</h3>
                         <p class="mb-3"><strong>Missions réalisées :</strong></p>
                         <ul class="fa-ul mb-4" style="margin-left: 1.5rem;">
@@ -232,48 +242,23 @@
                             <li class="mb-2"><span class="fa-li"><i class="fas fa-check text-primary"></i></span>Administration de <strong>Grav CMS</strong> et développement/intégration d'une application web interne en Python.</li>
                         </ul>
                         
-                        <div class="mt-3 mb-4">
+                        <div class="mt-3">
                             <span class="tech-badge">Proxmox VE</span>
                             <span class="tech-badge">FOG Project</span>
                             <span class="tech-badge">LXC Containers</span>
                             <span class="tech-badge">Grav CMS</span>
                             <span class="tech-badge">Python / Apache</span>
                         </div>
-
-                        <!-- Boutons d'actions pour le stage avec la bonne URL -->
-                        <div class="d-flex gap-3 flex-wrap">
-                            <a href="#" class="btn-action" target="_blank"><i class="fas fa-file-pdf"></i> Télécharger mon Rapport de Stage (PDF)</a>
-                            <a href="https://lycee-mandela.fr/" class="btn-secondary-action" target="_blank"><i class="fas fa-external-link-alt"></i> Site du Lycée Nelson Mandela</a>
-                        </div>
                     </div>
-                </div>
-            </section>
-            
-            <!-- Section CV & Documents -->
-            <section class="resume-section" id="documents">
-                <div class="resume-section-content">
-                    <h2 class="mb-3">CV & Documents Officiels</h2>
-                    <p class="mb-4" style="max-width: 800px;">Téléchargez ou visualisez mes documents professionnels mis à jour.</p>
-                    
-                    <div class="document-box" style="max-width: 900px;">
-                        <h3 class="text-primary mb-3"><i class="fas fa-user-tie me-2"></i> Curriculum Vitae - Mayeul Carcany</h3>
-                        
-                        <p class="mb-2"><strong>Coordonnées :</strong> Saint-Benoît, La Réunion | Tél : 0692 86 41 23 | Email : <a href="mailto:carcanymayeul@icloud.com" style="color: #34d399; text-decoration: none;">carcanymayeul@icloud.com</a></p>
-                        <p class="mb-4"><strong>Profil :</strong> Étudiant en 2e année de BTS SIO option SISR rigoureux et autonome, spécialisé dans l'administration des systèmes Linux, la virtualisation sous Proxmox et le déploiement d'applications web internes.</p>
-                        
-                        <h4 class="cv-section-title">Formations</h4>
-                        <p class="mb-2">
-                            <strong>BTS SIO (Services Informatiques aux Organisations) - Option SISR</strong><br>
-                            <a href="https://lycee-mandela.fr/" target="_blank" style="color: #34d399; text-decoration: none;">Lycée Nelson Mandela</a>, Saint-Benoît (2025 - 2027) - <em>2e année en cours</em>
-                        </p>
-                        <p class="mb-4">
-                            <strong>Baccalauréat STMG</strong><br>
-                            <a href="https://lycee-mandela.fr/" target="_blank" style="color: #34d399; text-decoration: none;">Lycée Nelson Mandela</a>, Saint-Benoît - <em>Diplômé</em>
-                        </p>
 
-                        <div class="mt-4 pt-3 border-top border-secondary d-flex gap-3 flex-wrap">
-                            <a href="#" class="btn-action" target="_blank"><i class="fas fa-download"></i> Télécharger le CV (PDF)</a>
-                            <a href="#" class="btn-secondary-action" target="_blank"><i class="fas fa-file-pdf"></i> Télécharger le Rapport de Stage (PDF)</a>
+                    <!-- Bloc Téléchargements (CV & Rapport) sur la même page -->
+                    <div class="document-box">
+                        <h3 class="text-primary mb-3"><i class="fas fa-file-download me-2"></i> Pièces Jointes & Téléchargements</h3>
+                        <p class="mb-4">Accédez à mon Curriculum Vitae mis à jour et à mon rapport de stage complet au format PDF.</p>
+                        
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="cv.pdf" class="btn-action" target="_blank"><i class="fas fa-file-pdf"></i> Télécharger mon CV</a>
+                            <a href="rapport-stage.pdf" class="btn-secondary-action" target="_blank"><i class="fas fa-file-alt"></i> Télécharger le Rapport de Stage</a>
                         </div>
                     </div>
                 </div>
