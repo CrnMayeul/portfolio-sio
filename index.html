@@ -7,82 +7,128 @@
         <meta name="author" content="Mayeul Carcany" />
         <title>Mayeul Carcany - Portfolio BTS SIO SISR</title>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=swap" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
         
         <style>
             :root {
-                --bs-primary: #10b981 !important;
-            }
-            body {
-                background-color: #0b0f19 !important;
-                color: #94a3b8 !important;
-                font-family: 'Inter', sans-serif !important;
-                overflow-x: hidden;
-            }
-            
-            /* --- MENU LATÉRAL PROFESSIONNEL --- */
-            #sideNav {
-                background-color: #0f172a !important;
-                border-right: 1px solid #1e293b;
-                padding: 2rem 1.25rem !important;
-                box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
-            }
-            #sideNav .navbar-brand {
-                margin-bottom: 2rem;
-            }
-            #sideNav .navbar-nav .nav-item {
-                margin-bottom: 0.75rem;
-            }
-            #sideNav .navbar-nav .nav-link {
-                color: #94a3b8 !important;
-                font-weight: 500;
-                font-size: 0.85rem;
-                letter-spacing: 0.05em;
-                text-transform: uppercase;
-                padding: 14px 18px !important;
-                border-radius: 10px;
-                transition: all 0.25s ease-in-out;
-                display: flex;
-                align-items: center;
-                gap: 12px;
-            }
-            #sideNav .navbar-nav .nav-link i {
-                font-size: 1rem;
-                width: 20px;
-                text-align: center;
-            }
-            #sideNav .navbar-nav .nav-link:hover {
-                color: #34d399 !important;
-                background-color: rgba(16, 185, 129, 0.08);
-                transform: translateX(4px);
-            }
-            #sideNav .navbar-nav .nav-link.active-link {
-                color: #0f172a !important;
-                background: linear-gradient(135deg, #34d399 0%, #10b981 100%) !important;
-                font-weight: 700;
-                box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);
+                --accent-green: #00ff9d;
+                --primary-emerald: #10b981;
+                --bg-main: #070a13;
+                --bg-card: #0f172a;
+                --border-color: rgba(51, 65, 85, 0.6);
+                --text-bright: #f8fafc;
+                --text-muted: #94a3b8;
             }
 
-            /* --- MISE EN PAGE DU CONTENU --- */
-            .container-fluid {
-                padding-left: calc(18rem + 3rem) !important;
-                padding-right: 4rem !important;
-                padding-top: 4rem !important;
-                padding-bottom: 4rem !important;
+            body {
+                background-color: var(--bg-main) !important;
+                color: var(--text-muted) !important;
+                font-family: 'Plus Jakarta Sans', sans-serif !important;
+                overflow-x: hidden;
+                margin: 0;
             }
+            
+            /* --- BARRE LATÉRALE TYPE ICONES --- */
+            #sideNav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 80px;
+                background-color: #090d16 !important;
+                border-right: 1px solid rgba(255, 255, 255, 0.05);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1.5rem 0;
+                z-index: 1000;
+                box-shadow: 4px 0 25px rgba(0, 0, 0, 0.5);
+            }
+
+            .nav-brand-icon {
+                width: 45px;
+                height: 45px;
+                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #070a13;
+                font-weight: 800;
+                font-size: 1.1rem;
+                margin-bottom: 2.5rem;
+                box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+                text-decoration: none;
+            }
+
+            .navbar-nav {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+                width: 100%;
+            }
+
+            .navbar-nav .nav-link {
+                width: 48px;
+                height: 48px;
+                border-radius: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #64748b !important;
+                font-size: 1.1rem;
+                transition: all 0.25s ease;
+                background: transparent;
+                border: 1px solid transparent;
+            }
+
+            .navbar-nav .nav-link:hover {
+                color: var(--accent-green) !important;
+                background-color: rgba(16, 185, 129, 0.08);
+                border-color: rgba(16, 185, 129, 0.2);
+            }
+
+            .navbar-nav .nav-link.active-link {
+                color: #070a13 !important;
+                background: linear-gradient(135deg, #00ff9d 0%, #10b981 100%) !important;
+                box-shadow: 0 0 20px rgba(0, 255, 157, 0.35);
+                font-weight: 700;
+            }
+
+            /* --- CONTENU PRINCIPAL --- */
+            .main-content {
+                margin-left: 80px;
+                padding: 4rem 5rem;
+                max-width: 1400px;
+            }
+
             @media (max-width: 992px) {
-                .container-fluid {
-                    padding-left: 1.5rem !important;
-                    padding-right: 1.5rem !important;
-                    padding-top: 6rem !important;
+                #sideNav {
+                    width: 100vw;
+                    height: 70px;
+                    flex-direction: row;
+                    padding: 0 1.5rem;
+                    justify-content: space-between;
                 }
+                .main-content {
+                    margin-left: 0;
+                    margin-top: 80px;
+                    padding: 2rem 1.5rem;
+                }
+                .nav-brand-icon { margin-bottom: 0; }
+                .navbar-nav { flex-direction: row; }
             }
 
             .resume-section {
                 display: none;
-                min-height: 80vh;
                 animation: fadeIn 0.35s ease-in-out;
+            }
+            .resume-section.active-section {
+                display: block;
             }
 
             @keyframes fadeIn {
@@ -90,257 +136,333 @@
                 to { opacity: 1; transform: translateY(0); }
             }
 
-            .text-primary {
-                color: #34d399 !important;
+            /* --- HERO / ACCUEIL --- */
+            .hero-container {
+                display: grid;
+                grid-template-columns: 280px 1fr;
+                gap: 3rem;
+                align-items: center;
+                margin-bottom: 4rem;
             }
-            h1, h2, h3, h4, h5, h6 {
-                color: #f8fafc !important;
-                font-weight: 700;
+            @media (max-width: 768px) {
+                .hero-container { grid-template-columns: 1fr; text-align: center; }
             }
-            p, ul, li {
-                color: #cbd5e1 !important;
-                line-height: 1.7;
+
+            .profile-pic-container {
+                width: 260px;
+                height: 260px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #1e293b, #0f172a);
+                border: 3px solid var(--accent-green);
+                box-shadow: 0 0 35px rgba(0, 255, 157, 0.25);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                position: relative;
             }
-            
-            /* --- CARTES ET CONTENEURS --- */
-            .document-box {
-                background: linear-gradient(145deg, #131c31 0%, #0f172a 100%);
-                border: 1px solid #1e293b;
-                border-radius: 16px;
-                padding: 40px;
-                margin-bottom: 30px;
-                box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-                transition: border-color 0.2s ease;
+            .profile-pic-container i {
+                font-size: 7rem;
+                color: var(--accent-green);
             }
-            .document-box:hover {
-                border-color: rgba(52, 211, 153, 0.3);
+
+            h1 {
+                font-size: 3.5rem;
+                font-weight: 800;
+                color: var(--text-bright);
+                margin: 0 0 0.5rem 0;
+                letter-spacing: -0.03em;
             }
-            
+            .text-primary { color: var(--accent-green) !important; }
+
+            /* --- GRILLES DE CARTES --- */
+            .grid-2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+            .grid-3 {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            @media (max-width: 992px) {
+                .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            }
+
+            .card-box {
+                background-color: var(--bg-card);
+                border: 1px solid var(--border-color);
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                transition: all 0.3s ease;
+            }
+            .card-box:hover {
+                border-color: rgba(0, 255, 157, 0.3);
+                transform: translateY(-2px);
+            }
+
             .tech-badge {
-                background-color: #0b0f19;
-                color: #34d399;
-                border: 1px solid #1e293b;
-                padding: 8px 16px;
-                border-radius: 30px;
-                font-size: 0.82rem;
+                font-family: 'JetBrains Mono', monospace;
+                background-color: rgba(0, 255, 157, 0.08);
+                color: var(--accent-green);
+                border: 1px solid rgba(0, 255, 157, 0.2);
+                padding: 6px 14px;
+                border-radius: 8px;
+                font-size: 0.8rem;
                 font-weight: 600;
                 display: inline-block;
-                margin-right: 8px;
-                margin-bottom: 10px;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                margin: 0 6px 8px 0;
             }
 
-            .mission-list {
-                list-style: none;
-                padding-left: 0;
-            }
-            .mission-list li {
-                position: relative;
-                padding-left: 30px;
-                margin-bottom: 14px;
-                font-size: 1.02rem;
-            }
-            .mission-list li i {
-                position: absolute;
-                left: 0;
-                top: 4px;
-                color: #34d399;
-            }
-
-            /* --- BOUTONS DESIGN --- */
-            .btn-action {
-                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-                color: #0f172a !important;
+            /* --- BOUTONS --- */
+            .btn-custom {
+                background: linear-gradient(135deg, #00ff9d 0%, #10b981 100%);
+                color: #070a13 !important;
                 font-weight: 700;
-                padding: 14px 26px;
+                padding: 12px 24px;
                 border-radius: 10px;
                 border: none;
-                transition: all 0.25s ease;
                 text-decoration: none;
                 display: inline-flex;
                 align-items: center;
                 gap: 10px;
-                box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+                box-shadow: 0 4px 15px rgba(0, 255, 157, 0.3);
+                transition: all 0.25s ease;
+                cursor: pointer;
             }
-            .btn-action:hover {
+            .btn-custom:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-                background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-                color: #0b0f19 !important;
+                box-shadow: 0 6px 20px rgba(0, 255, 157, 0.5);
             }
-            
-            .btn-secondary-action {
+
+            .btn-secondary-custom {
                 background-color: #1a2234;
-                color: #f8fafc !important;
+                color: var(--text-bright) !important;
                 font-weight: 600;
-                padding: 14px 26px;
+                padding: 12px 24px;
                 border-radius: 10px;
-                border: 1px solid #2d3748;
+                border: 1px solid var(--border-color);
                 text-decoration: none;
                 display: inline-flex;
                 align-items: center;
                 gap: 10px;
                 transition: all 0.25s ease;
             }
-            .btn-secondary-action:hover {
+            .btn-secondary-custom:hover {
                 background-color: #243049;
-                border-color: #4a5568;
-                color: #ffffff !important;
-                transform: translateY(-2px);
+                color: #fff !important;
+                border-color: rgba(0, 255, 157, 0.4);
             }
+
+            /* --- FORMULAIRE DE CONTACT --- */
+            .form-control-custom {
+                width: 100%;
+                background-color: #070a13;
+                border: 1px solid var(--border-color);
+                border-radius: 10px;
+                padding: 12px 16px;
+                color: var(--text-bright);
+                font-family: inherit;
+                box-sizing: border-box;
+                transition: border-color 0.25s ease;
+            }
+            .form-control-custom:focus {
+                outline: none;
+                border-color: var(--accent-green);
+                box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+            }
+
+            p { color: var(--text-muted); line-height: 1.7; }
+            h2, h3, h4 { color: var(--text-bright); font-weight: 700; }
         </style>
     </head>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger text-center w-100" href="#accueil">
-                <span class="d-block d-lg-none text-white font-weight-bold">Mayeul Carcany</span>
-                <span class="d-none d-lg-block">
-                    <div style="width: 8.5rem; height: 8.5rem; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; color: #34d399; font-size: 2.8rem; border: 2px solid #34d399; box-shadow: 0 0 25px rgba(52, 211, 153, 0.2);">
+    <body>
+
+        <!-- Barre Latérale avec Icônes -->
+        <nav id="sideNav">
+            <a href="#accueil" class="nav-brand-icon js-scroll-trigger">MC</a>
+            <ul class="navbar-nav">
+                <li><a class="nav-link js-scroll-trigger active-link" href="#accueil" title="Accueil"><i class="fas fa-home"></i></a></li>
+                <li><a class="nav-link js-scroll-trigger" href="#profil" title="Profil"><i class="fas fa-user-gear"></i></a></li>
+                <li><a class="nav-link js-scroll-trigger" href="#projets" title="Projets E4"><i class="fas fa-server"></i></a></li>
+                <li><a class="nav-link js-scroll-trigger" href="#parcours" title="Stages & Documents"><i class="fas fa-folder-open"></i></a></li>
+                <li><a class="nav-link js-scroll-trigger" href="#contact" title="Contact"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            
+            <!-- SECTION ACCUEIL -->
+            <section class="resume-section active-section" id="accueil">
+                <div class="hero-container">
+                    <div class="profile-pic-container">
                         <i class="fas fa-user-shield"></i>
                     </div>
-                    <h5 class="text-white mb-1" style="font-size: 1.1rem; font-weight: 700;">Mayeul Carcany</h5>
-                    <p class="text-muted small mb-0" style="font-size: 0.75rem; color: #64748b !important;">BTS SIO SISR</p>
-                </span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav w-100 flex-column">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#accueil"><i class="fas fa-home"></i> Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profil"><i class="fas fa-user-graduate"></i> Profil</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#parcours"><i class="fas fa-briefcase"></i> Stages & Documents</a></li>
-                </ul>
-            </div>
-        </nav>
-        
-        <div class="container-fluid">
-            
-            <!-- Section Accueil -->
-            <section class="resume-section" id="accueil">
-                <div class="resume-section-content" style="display: flex; flex-direction: column; justify-content: center; min-height: 75vh;">
-                    <div style="max-width: 850px;">
-                        <span class="tech-badge mb-3"><i class="fas fa-circle text-success me-1" style="font-size: 0.5rem;"></i> En recherche de poursuite / opportunités</span>
-                        <h1 style="font-size: 3.2rem; letter-spacing: -0.02em; font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem;">
-                            Administrateur Systèmes & Réseaux <span class="text-primary">en formation</span>
-                        </h1>
-                        <p class="lead mb-4" style="font-size: 1.25rem; color: #94a3b8; font-weight: 400;">
-                            Étudiant rigoureux en 2e année de BTS SIO Option SISR au Lycée Nelson Mandela (La Réunion). Passionné par la virtualisation, la sécurité et l'infrastructure.
+                    <div>
+                        <p class="text-primary fw-bold mb-2" style="font-family: 'JetBrains Mono', monospace;">Bonjour, je suis</p>
+                        <h1>Mayeul CARCANY</h1>
+                        <h4 class="text-muted mb-3" style="font-size: 1.2rem;">Étudiant en BTS SIO option SISR (2e année)</h4>
+                        <p class="mb-4" style="max-width: 650px;">
+                            Entre administration d'infrastructure et virtualisation, je cultive ma curiosité, ma réactivité et mon goût du défi, aussi bien derrière un écran que dans la gestion des réseaux.
                         </p>
-                        <div class="d-flex gap-3 flex-wrap pt-2">
-                            <a href="#profil" class="btn-action js-scroll-trigger"><i class="fas fa-arrow-right"></i> Découvrir mon profil</a>
-                            <a href="#parcours" class="btn-secondary-action js-scroll-trigger"><i class="fas fa-folder-open"></i> Voir mes travaux</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section Profil -->
-            <section class="resume-section" id="profil">
-                <div class="resume-section-content" style="max-width: 900px;">
-                    <h2 class="mb-2" style="font-size: 2.5rem; font-weight: 800;">
-                        MAYEUL <span class="text-primary">CARCANY</span>
-                    </h2>
-                    <p class="text-muted mb-4 font-weight-bold" style="letter-spacing: 0.05em; font-size: 0.9rem; color: #64748b !important;">
-                        ÉTUDIANT EN 2E ANNÉE DE BTS SIO OPTION SISR · LYCÉE NELSON MANDELA (SAINT-BENOÎT, LA RÉUNION)
-                    </p>
-                    
-                    <div class="document-box">
-                        <h3 class="text-primary mb-3" style="font-size: 1.4rem;"><i class="fas fa-id-card me-2"></i> À propos de moi</h3>
-                        <p class="mb-3">Titulaire d'un <strong>Baccalauréat STMG</strong> obtenu au Lycée Nelson Mandela, je poursuis actuellement mes études en deuxième année de BTS SIO (Services Informatiques aux Organisations) option <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux) au sein du même établissement à Saint-Benoît. Je me spécialise dans la gestion, la sécurisation et l'optimisation des architectures réseaux et des environnements serveurs.</p>
-                        <p class="mb-4">Rigoureux, curieux et méthodique, je développe au quotidien des compétences solides en administration système Linux, en virtualisation avancée (Proxmox VE, conteneurs LXC) ainsi qu'en automatisation du déploiement de postes informatiques (FOG Project).</p>
-                        
-                        <div class="mb-4 pt-2">
-                            <h5 class="text-white mb-3" style="font-size: 1rem;">Compétences clés :</h5>
-                            <span class="tech-badge">Administration Linux</span>
-                            <span class="tech-badge">Proxmox VE / LXC</span>
-                            <span class="tech-badge">Réseaux & Sécurité</span>
-                            <span class="tech-badge">FOG Project</span>
-                            <span class="tech-badge">Python / Git</span>
-                            <span class="tech-badge">Apache / PHP / Grav</span>
-                        </div>
-
-                        <div class="d-flex gap-3 flex-wrap pt-3 border-top border-secondary">
-                            <a href="#parcours" class="btn-action js-scroll-trigger" style="font-size: 0.9rem; padding: 10px 20px;"><i class="fas fa-briefcase"></i> Voir mon stage & documents</a>
-                        </div>
-                    </div>
-
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="mailto:carcanymayeul@icloud.com" class="btn-secondary-action"><i class="fas fa-envelope text-primary"></i> Me contacter (E-mail)</a>
-                        <a href="https://lycee-mandela.fr/" target="_blank" class="btn-secondary-action"><i class="fas fa-school text-primary"></i> Site du Lycée Nelson Mandela</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section Parcours & Documents -->
-            <section class="resume-section" id="parcours">
-                <div class="resume-section-content" style="max-width: 900px;">
-                    <h2 class="mb-2" style="font-size: 2.5rem; font-weight: 800;">Parcours Professionnel & Documents</h2>
-                    <p class="mb-4 text-muted">Retrouvez ci-dessous le bilan de mes missions en milieu professionnel ainsi que les documents officiels à consulter.</p>
-
-                    <!-- Bloc Stage -->
-                    <div class="document-box">
-                        <div class="d-flex align-items-center mb-3">
-                            <div style="width: 45px; height: 45px; background: rgba(16, 185, 129, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #34d399; font-size: 1.2rem; margin-right: 15px; border: 1px solid rgba(16, 185, 129, 0.2);">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-white mb-0" style="font-size: 1.3rem;">Stage Technique - Lycée Nelson Mandela</h3>
-                                <span class="text-muted small">Mission d'administration et d'infrastructure SISR</span>
-                            </div>
-                        </div>
-
-                        <p class="mb-3 text-white font-weight-bold">Missions principales réalisées :</p>
-                        <ul class="mission-list mb-4">
-                            <li><i class="fas fa-check-circle"></i> Interventions sur le câblage réseau et l'infrastructure informatique de l'établissement (salle B112).</li>
-                            <li><i class="fas fa-check-circle"></i> Industrialisation du déploiement de postes et de systèmes via <strong>FOG Project</strong>.</li>
-                            <li><i class="fas fa-check-circle"></i> Mise en place de l'hyperviseur <strong>Proxmox VE</strong> et gestion de conteneurs <strong>LXC</strong>.</li>
-                            <li><i class="fas fa-check-circle"></i> Administration de <strong>Grav CMS</strong> et développement/intégration d'une application web interne en <strong>Python</strong>.</li>
-                        </ul>
-                        
-                        <div class="pt-2">
-                            <span class="tech-badge">Proxmox VE</span>
-                            <span class="tech-badge">FOG Project</span>
-                            <span class="tech-badge">LXC Containers</span>
-                            <span class="tech-badge">Grav CMS</span>
-                            <span class="tech-badge">Python / Apache</span>
-                        </div>
-                    </div>
-
-                    <!-- Bloc Téléchargements -->
-                    <div class="document-box">
-                        <div class="d-flex align-items-center mb-3">
-                            <div style="width: 45px; height: 45px; background: rgba(16, 185, 129, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #34d399; font-size: 1.2rem; margin-right: 15px; border: 1px solid rgba(16, 185, 129, 0.2);">
-                                <i class="fas fa-file-download"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-white mb-0" style="font-size: 1.3rem;">Pièces Jointes & Téléchargements</h3>
-                                <span class="text-muted small">Accès direct aux supports officiels de validation</span>
-                            </div>
-                        </div>
-                        
-                        <p class="mb-4">Consultez ou téléchargez mon CV professionnel ainsi que mon rapport de stage complet au format PDF.</p>
-                        
                         <div class="d-flex gap-3 flex-wrap">
-                            <a href="file:///D:/Documents%20de%20Mayeul/CV%20professionnel%20de%20Mayeul%20Carcany.pdf" class="btn-action" target="_blank"><i class="fas fa-file-pdf"></i> Télécharger mon CV</a>
-                            <a href="file:///U:/CARCANY%20Mayeul/Documents%20de%20Mayeul/Rapport_Stage_BTS_SIO_Mayeul_Carcany_.pdf" class="btn-secondary-action" target="_blank"><i class="fas fa-file-alt text-primary"></i> Télécharger le Rapport de Stage</a>
+                            <a href="#contact" class="btn-custom js-scroll-trigger"><i class="fas fa-paper-plane"></i> Me contacter</a>
+                            <a href="docs/CV_Mayeul_Carcany.pdf" target="_blank" class="btn-secondary-custom"><i class="fas fa-file-pdf text-primary"></i> Voir mon CV</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card-box">
+                        <h3 class="mb-3 text-primary"><i class="fas fa-bullseye me-2"></i> Mes objectifs</h3>
+                        <p>• Développer mes compétences techniques en administration système et sécurité.</p>
+                        <p>• Optimiser les architectures réseaux et les environnements virtuels.</p>
+                        <p>• Contribuer à des projets d'infrastructure innovants à La Réunion.</p>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="mb-3 text-primary"><i class="fas fa-heart me-2"></i> Ma motivation</h3>
+                        <p>J'aime résoudre des problèmes complexes, automatiser des déploiements (FOG, Proxmox), partager mes connaissances et apprendre des autres pour progresser ensemble au quotidien.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION PROFIL -->
+            <section class="resume-section" id="profil">
+                <h2 class="mb-4">02 · Mon <span class="text-primary">profil</span></h2>
+                <div class="grid-2">
+                    <div class="card-box">
+                        <h4 class="text-primary mb-3">À propos</h4>
+                        <p>Je suis actuellement en 2e année de BTS Services Informatiques aux Organisations (SIO) option <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux) au Lycée Nelson Mandela à Saint-Benoît, La Réunion.</p>
+                        <p>Mon parcours m'a permis de développer une solide base en administration Linux/Windows, virtualisation et sécurité.</p>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="text-primary mb-3">Compétences techniques</h4>
+                        <div>
+                            <span class="tech-badge">Linux Debian</span>
+                            <span class="tech-badge">Windows Server 2025</span>
+                            <span class="tech-badge">Proxmox VE / LXC</span>
+                            <span class="tech-badge">FOG Project</span>
+                            <span class="tech-badge">Cisco / pfSense</span>
+                            <span class="tech-badge">PHP / Symfony</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Python / Git</span>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <!-- SECTION PROJETS & E4 -->
+            <section class="resume-section" id="projets">
+                <h2 class="mb-4">03 · Projets & <span class="text-primary">Réalisations SIO</span></h2>
+                <div class="card-box mb-4">
+                    <h3 class="text-primary mb-2"><i class="fas fa-network-wired me-2"></i> Infrastructure Virtualisée & Déploiement</h3>
+                    <p class="mb-3">Mise en place d'un hyperviseur Proxmox VE, gestion des conteneurs LXC et automatisation du déploiement de postes clients via FOG Project dans le cadre des ateliers professionnels.</p>
+                    <span class="tech-badge">Proxmox VE</span>
+                    <span class="tech-badge">FOG Project</span>
+                    <span class="tech-badge">Conteneurs LXC</span>
+                </div>
+                <div class="card-box">
+                    <h3 class="text-primary mb-2"><i class="fas fa-code me-2"></i> Application Web 974CAR & Grav CMS</h3>
+                    <p class="mb-3">Conception et développement d'une application de gestion de garage (974CAR) en PHP/Symfony avec base de données PostgreSQL, et administration de la plateforme Grav CMS.</p>
+                    <span class="tech-badge">PHP / Symfony</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">Grav CMS</span>
+                </div>
+            </section>
+
+            <!-- SECTION STAGE & DOCUMENTS -->
+            <section class="resume-section" id="parcours">
+                <h2 class="mb-4">04 · Stages & <span class="text-primary">Documents</span></h2>
+                
+                <div class="card-box mb-4">
+                    <h3 class="text-primary mb-2"><i class="fas fa-building me-2"></i> Stage Technique - Lycée Nelson Mandela</h3>
+                    <p class="text-muted small mb-3">Période de première année · Administration et infrastructure SISR</p>
+                    <p class="mb-3">Interventions sur le câblage réseau, industrialisation du déploiement de postes (FOG), configuration de Proxmox et mise en place d'une application interne en Python.</p>
+                    
+                    <div style="background: rgba(0, 255, 157, 0.05); border-left: 3px solid var(--accent-green); padding: 12px 16px; border-radius: 0 10px 10px 0; margin-top: 15px;">
+                        <strong class="text-white"><i class="fas fa-calendar-alt text-primary me-2"></i> Recherche de stage (2e année) :</strong> 
+                        <span class="text-bright">Durée : 6 semaines · Période : 25 Janvier – 08 Mars 2027</span>
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <h3 class="text-primary mb-3"><i class="fas fa-download me-2"></i> Téléchargements officiels</h3>
+                    <p class="mb-4">Accédez à mes pièces justificatives pour l'examen :</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="docs/CV_Mayeul_Carcany.pdf" target="_blank" class="btn-custom"><i class="fas fa-file-pdf"></i> Télécharger mon CV</a>
+                        <a href="docs/Rapport_Stage_BTS_SIO_Mayeul_Carcany.pdf" target="_blank" class="btn-secondary-custom"><i class="fas fa-file-alt text-primary"></i> Rapport de Stage PDF</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION CONTACT -->
+            <section class="resume-section" id="contact">
+                <h2 class="mb-4">05 · Me <span class="text-primary">Contacter</span></h2>
+                
+                <div class="grid-3 mb-4">
+                    <div class="card-box" style="text-align: center;">
+                        <i class="fas fa-envelope text-primary mb-3" style="font-size: 2rem;"></i>
+                        <h4>Email</h4>
+                        <p class="mb-0"><a href="mailto:carcanymayeul@icloud.com" class="text-primary" style="text-decoration: none;">carcanymayeul@icloud.com</a></p>
+                    </div>
+                    <div class="card-box" style="text-align: center;">
+                        <i class="fas fa-phone text-primary mb-3" style="font-size: 2rem;"></i>
+                        <h4>Téléphone</h4>
+                        <p class="mb-0" style="color: var(--text-bright);">0692 86 41 23</p>
+                    </div>
+                    <div class="card-box" style="text-align: center;">
+                        <i class="fas fa-map-marker-alt text-primary mb-3" style="font-size: 2rem;"></i>
+                        <h4>Localisation</h4>
+                        <p class="mb-0" style="color: var(--text-bright);">Saint-Benoît, La Réunion</p>
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <h3 class="text-primary mb-4"><i class="fas fa-paper-plane me-2"></i> Envoyer un message</h3>
+                    <form action="mailto:carcanymayeul@icloud.com" method="post" enctype="text/plain">
+                        <div class="grid-2" style="margin-bottom: 1rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 6px; color: var(--text-bright); font-size: 0.9rem;">Nom complet</label>
+                                <input type="text" class="form-control-custom" name="nom" required placeholder="Votre nom">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 6px; color: var(--text-bright); font-size: 0.9rem;">Adresse e-mail</label>
+                                <input type="email" class="form-control-custom" name="email" required placeholder="votre.email@exemple.fr">
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; margin-bottom: 6px; color: var(--text-bright); font-size: 0.9rem;">Objet</label>
+                            <input type="text" class="form-control-custom" name="objet" required placeholder="Sujet de votre message">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 6px; color: var(--text-bright); font-size: 0.9rem;">Message</label>
+                            <textarea class="form-control-custom" name="message" rows="5" required placeholder="Écrivez votre message ici..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-custom"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+                    </form>
+                </div>
+            </section>
+
         </div>
 
-        <!-- Scripts Bootstrap et Gestion dynamique de la navigation -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Script de navigation dynamique -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const navLinks = document.querySelectorAll('.js-scroll-trigger');
                 const sections = document.querySelectorAll('.resume-section');
 
-                function showSection(targetId) {
-                    sections.forEach(section => {
-                        if ('#' + section.id === targetId) {
-                            section.style.display = 'block';
+                function switchSection(targetId) {
+                    const cleanTargetId = targetId.startsWith('#') ? targetId.substring(1) : targetId;
+
+                    sections.forEach(sec => {
+                        if (sec.id === cleanTargetId) {
+                            sec.classList.add('active-section');
                         } else {
-                            section.style.display = 'none';
+                            sec.classList.remove('active-section');
                         }
                     });
 
@@ -353,22 +475,12 @@
                     });
                 }
 
-                // Affiche la page d'accueil par défaut
-                showSection('#accueil');
-
                 navLinks.forEach(link => {
                     link.addEventListener('click', function (e) {
                         const targetId = this.getAttribute('href');
                         if (targetId && targetId.startsWith('#')) {
                             e.preventDefault();
-                            showSection(targetId);
-                            
-                            const navbarResponsive = document.querySelector('#navbarResponsive');
-                            const navbarToggler = document.querySelector('.navbar-toggler');
-                            if (navbarResponsive && navbarResponsive.classList.contains('show')) {
-                                navbarToggler.click();
-                            }
-                            
+                            switchSection(targetId);
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
                     });
